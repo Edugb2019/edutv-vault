@@ -15,9 +15,9 @@ jobs:
           channel: 'stable'
       - name: Criar pasta Android
         run: |
-          flutter create --project-name edutv_vault --org com.edutv.vault --platforms=android temp_app
-          cp -r temp_app/android./
-          rm -rf temp_app
+          flutter create --org com.edutv.vault --project-name edutv_vault --platforms=android temp_fix
+          cp -r temp_fix/android.
+          rm -rf temp_fix
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
